@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<rabbitMQ>
+  <connectionFactory hostName="192.168.70.115" userName="silkroad" password="sjit@1234"></connectionFactory>
+  <exchangeList>
+    <exchange name="exchangeName_A" type="direct">
+      <queueList>
+        <queue name="queue_test_A" durable="true" exclusive="false" autoDelete="false" routingKey="routingKey_A" type="send"></queue>
+        <queue name="queue_test_B" durable="true" exclusive="false" autoDelete="false" routingKey="routingKey_B" type="receive"></queue>
+      </queueList>
+    </exchange>
+  </exchangeList>
+</rabbitMQ>

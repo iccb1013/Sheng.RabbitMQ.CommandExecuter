@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<databaseSync>
+  <connectionList>
+    <connection name="connection1" connectionString=""/>
+    <connection name="connection2" connectionString=""/>
+  </connectionList>
+  <consumerList>
+    <consumer name="crm" connection="connection1">
+      <producerList>
+        <producer name="erp" routingKey="routingKey_A" connection="connection2">
+          <tableDefinition>
+            <table name="Customers" primaryKey="Id" consumerTable="Customers" consumerTablePrimaryKey="Id">
+              <Field name="Id" consumerField="Id" ></Field>
+              <Field name="CustomerName" consumerField="CustomerName"></Field>
+              <Field name="NopUserName" consumerField="NopUserName"></Field>
+            </table>
+          </tableDefinition>
+        </producer>
+      </producerList>
+    </consumer>
+  </consumerList>
+</databaseSync>
