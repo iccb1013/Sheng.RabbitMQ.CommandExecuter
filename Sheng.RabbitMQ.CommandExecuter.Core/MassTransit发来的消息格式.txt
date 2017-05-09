@@ -1,0 +1,26 @@
+﻿{
+  "messageId": "02700000-4f1f-001e-0fcd-08d4821299a8",
+  "conversationId": "02700000-4f1f-001e-11bf-08d4821299a8",
+  "sourceAddress": "rabbitmq://192.168.70.115/bus-WIN-A52ACSGHFF5-w3wp-yjayyynxdhybhmscbdkerrnhry?durable=false&autodelete=true",
+  "destinationAddress": "rabbitmq://192.168.70.115/ShareJoy.SilkRoad.Ultility.EventBus:DataSyncItem",
+  "messageType": [
+    "urn:message:ShareJoy.SilkRoad.Ultility.EventBus:DataSyncItem"
+  ],
+  "message": {
+    "syncVerb": 2,
+    "entityType": "ShareJoy.SilkRoad.Entities.Customer",
+    "primaryKey": "84c223ca-f72a-4614-83a9-ab5f16af89a3",
+    "syncSpecification": "ShareJoy.SilkRoad.Entities.Customer:Update"
+  },
+  "headers": {},
+  "host": {
+    "machineName": "WIN-A52ACSGHFF5",
+    "processName": "w3wp",
+    "processId": 13532,
+    "assembly": "MassTransit",
+    "assemblyVersion": "3.5.4.992",
+    "frameworkVersion": "4.0.30319.34209",
+    "massTransitVersion": "3.5.4.992",
+    "operatingSystemVersion": "Microsoft Windows NT 6.1.7600.0"
+  }
+}

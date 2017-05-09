@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<databaseSync>
+  <connectionList>
+    <connection name="nopConnection" connectionString="Server=192.168.100.117; Database=Nop; User Id=sa; Password=huaweis3900;"/>
+    <connection name="silkRoadConnection" connectionString="Server=192.168.100.117; Database=SilkRoad_20170424; User Id=sa; Password=huaweis3900;"/>
+    <!--<connection name="connection1" connectionString="Server=(localdb)\MSSQLLocalDB; Database=SilkRoad_Test; User Id=sa; Password=sa;"/>
+    <connection name="connection2" connectionString="Server=(localdb)\MSSQLLocalDB; Database=SilkRoad; User Id=sa; Password=sa;"/>-->
+  </connectionList>
+  <consumerList>
+    <consumer name="nop" connection="nopConnection">
+      <producerList>
+        <producer name="silkroad" routingKey="routingKey1" connection="silkRoadConnection">
+          <dataDefinition>
+            <data type="consumer" table="Customer" field="Id" to="#Id" primaryKey="CustomerGuid" primaryKeyValue="#customerGuid"/>
+          </dataDefinition>
+          <tableDefinition>
+            <table name="Customers" primaryKey="Id" consumerTable="Customer" consumerTablePrimaryKey="CustomerGuid">
+              <Field name="Id" consumerField="CustomerGuid"></Field>
+              <Field name="NopUserName" consumerField="Username"></Field>
+              <Field name="NopUserName" consumerField="NopUserName"></Field>
+            </table>
+            <table name="Customers" primaryKey="Id" consumerTable="CustomerPassword" consumerTablePrimaryKey="CustomerId">
+              <Field name="CustomerId" consumerField="#Id"></Field>
+              <Field name="NopPassword" consumerField="Password"></Field>
+            </table>
+          </tableDefinition>
+        </producer>
+      </producerList>
+    </consumer>
+  </consumerList>
+</databaseSync>
+
+

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<databaseSync>
+  <connectionList>
+    <connection name="connection1" connectionString="Server=192.168.100.117; Database=SilkRoad_Test; User Id=sa; Password=huaweis3900;"/>
+    <connection name="connection2" connectionString="Server=192.168.100.117; Database=SilkRoad_master; User Id=sa; Password=huaweis3900;"/>
+    <!--<connection name="connection1" connectionString="Server=(localdb)\MSSQLLocalDB; Database=SilkRoad_Test; User Id=sa; Password=sa;"/>
+    <connection name="connection2" connectionString="Server=(localdb)\MSSQLLocalDB; Database=SilkRoad; User Id=sa; Password=sa;"/>-->
+  </connectionList>
+  <consumerList>
+    <consumer name="crm" connection="connection1">
+      <producerList>
+        <producer name="erp" routingKey="routingKey1" connection="connection2">
+          <tableDefinition>
+            <table name="Customers" primaryKey="Id" consumerTable="Customers" consumerTablePrimaryKey="Id">
+              <Field name="Id" consumerField="Id" ></Field>
+              <Field name="CustomerName" consumerField="CustomerName"></Field>
+              <Field name="NopUserName" consumerField="NopUserName"></Field>
+            </table>
+          </tableDefinition>
+        </producer>
+      </producerList>
+    </consumer>
+  </consumerList>
+</databaseSync>
+
+

@@ -80,6 +80,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="MassTransit发来的消息格式.txt" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Sheng.RabbitMQ.CommandExecuter.Contract\Sheng.RabbitMQ.CommandExecuter.Contract.csproj">
       <Project>{dbbb3029-3f4b-4d0a-8c21-a518ad3d43ce}</Project>
       <Name>Sheng.RabbitMQ.CommandExecuter.Contract</Name>
