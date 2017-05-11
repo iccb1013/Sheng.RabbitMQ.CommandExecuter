@@ -23,7 +23,7 @@ namespace Sheng.RabbitMQ.CommandExecuter.Core
 
         private CommandExecuterService()
         {
-            _rabbitMQService.Subscribe("routingKey_A", MessageHandle);
+            _rabbitMQService.Subscribe(MessageHandle);
         }
 
         private void MessageHandle(ulong deliveryTag, string routingKey, string body)
