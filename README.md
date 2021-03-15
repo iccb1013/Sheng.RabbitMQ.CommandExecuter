@@ -11,4 +11,4 @@ Sheng.RabbitMQ.CommandExecuter 是使用 .Net 对 RabbitMQ 的一个简单封装
 你可以直接使用基本的 RabbitMQ 封装，也可以在此命令模式的基础上实现你自己的命令。
 
 详细说明请浏览：
-http://sheng.city/post/sheng-rabbitmq-commandexecuter
+https://shengxunwei.com
