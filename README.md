@@ -2,6 +2,8 @@
 
 请访问原版代码库，以获得最新更新: https://github.com/iccb1013/Sheng.RabbitMQ.CommandExecuter
 
+MIT 协议开源，可以随意使用，但是需在源代码和产品关于画面保留版权声明和我的网站链接，谢谢。
+
 Sheng.RabbitMQ.CommandExecuter 是使用 .Net 对 RabbitMQ 的一个简单封装。
 
 它通过XML配置文件定义Exchange及队列等信息，根据此配置文件自动声明及初始化相关队列信息，方便 .Net 开发人员使用 RabbitMQ。
